@@ -44,7 +44,7 @@
 
 /* Hamburger menu styles */
 .hamburger {
-  display: none; /* Hide by default on desktop */
+  display: none; /* Hide by default */
   flex-direction: column;
   cursor: pointer;
 }
@@ -75,14 +75,14 @@
 
 /* Media Queries for Responsive Design */
 
-/* For mobile devices (screen width less than 768px) */
+/* For screens smaller than 768px (mobile and minimized desktop) */
 @media (max-width: 768px) {
   .hamburger {
     display: flex; /* Show hamburger menu */
   }
 
   .navbar {
-    display: none; /* Hide desktop navbar on mobile */
+    display: none; /* Hide desktop navbar on smaller screens */
   }
 
   .mobile-menu.open {
