@@ -10,9 +10,11 @@ function Hero() {
           <h3>Welcome to my portfolio!</h3>
           <h2>I am Yogesh K Gowda</h2>
           <p>
-            I am a Data Science major BCA student who is enthusiastic about investigating 
-            and understanding the realm of data. Inherently curious, I find pleasure in grasping patterns, 
-            discovering insights, and tackling projects that push me to think critically.
+            I am a passionate programmer, a data science enthusiast, and a problem solver. 
+            I enjoy writing efficient code, testing software, and building modern web applications. 
+            With an analytical mindset, I use data and AI to find useful insights and create solutions that 
+            make a difference. My goal is to keep learning, improving, and contributing to the tech world by solving 
+            real-world problems with innovation and creativity.
           </p>
         </div>
 
