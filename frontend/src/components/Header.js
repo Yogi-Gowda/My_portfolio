@@ -21,8 +21,17 @@ const Header = () => {
         <div className="line"></div>
       </div>
 
-      {/* Navigation menu */}
-      <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+      {/* Desktop Navigation menu */}
+      <ul className="navbar">
+        <li onClick={() => scrollToSection("hero")}>Home</li>
+        <li onClick={() => scrollToSection("projects")}>Projects</li>
+        <li onClick={() => scrollToSection("blogs")}>Blogs</li>
+        <li onClick={() => scrollToSection("certifications")}>Certifications</li>
+        <li onClick={() => scrollToSection("contact")}>Contact Us</li>
+      </ul>
+
+      {/* Mobile Navigation menu */}
+      <ul className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <li onClick={() => scrollToSection("hero")}>Home</li>
         <li onClick={() => scrollToSection("projects")}>Projects</li>
         <li onClick={() => scrollToSection("blogs")}>Blogs</li>
