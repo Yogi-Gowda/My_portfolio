@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .projects-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .projects-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #00ff00;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .technologies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .technologies-list li {
+    background-color: #444;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .project-link {
+    text-decoration: none;
+    color: #00ff00;
+    font-weight: bold;
+  }
+  
+  .project-link:hover {
+    color: #fff;
+  }
+  /* View Project Button */
+.project-view-btn {
+  display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #000;
+    background-color: #00ff00;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-view-btn:hover {
+  background-color: #fff;
+  color: #070707;
+}
+
+/* Back Button */
+.project-back-btn {
+  display: inline-block;
+  background-color: #00ff00;
+  color: rgb(10, 10, 10);
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-back-btn:hover {
+  background-color: #fff;
+  color: #020202;
+}
+
+/* Project Detail Page */
+.project-detail {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #222;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.project-detail h2 {
+  font-size: 1.8rem;
+  color: #00ff00;
+  margin-top: 20px;
+}
+
+.project-detail p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.project-detail ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.project-detail li {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #fff;
+}
+
+  
+  
+  

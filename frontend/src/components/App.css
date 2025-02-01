@@ -1,0 +1,55 @@
+/* Default theme (dark) variables */
+:root {
+  --background-color: #111;
+  --text-color: #fff;
+  --button-bg: #00ff00;
+  --button-text: #000;
+}
+
+/* Light theme variables */
+[data-theme="light"] {
+  --background-color: #fff;
+  --text-color: #2ae723;
+  --button-bg: #007bff;
+  --button-text: #fff;
+}
+
+/* Apply variables to styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 10px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+  color: #00ff00;
+}
+
+.theme-toggle {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}

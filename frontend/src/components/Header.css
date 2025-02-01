@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: center; /* Space between navbar and social icons */
+  align-items: center; /* Vertical alignment */
+  padding: 0 20px;
+  background-color: #878b89; /* Navbar background */
+  color: #e44717;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.navbar {
+  /*display: flex;*/
+  justify-content: center;
+  flex: 0.9; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  color : rgb(236, 240, 236);
+}
+
+.navbar li {
+  margin: 0 15px;
+  color: white; /* Default text color */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #f5f2f0;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+  color: #1ef70a; /* Change color on hover */
+}
+
