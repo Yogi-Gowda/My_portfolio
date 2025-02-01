@@ -8,6 +8,7 @@
   height: 60px;
   border-radius: 8px;
   position: relative;
+  width: 100%;
 }
 
 /* Desktop Navigation */
@@ -24,20 +25,10 @@
   border-radius: 8px;
 }
 
-.navbar li {
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Hover effect for desktop menu */
-.navbar li:hover {
-  color: #00ff00; /* Change color on hover */
-}
-
 /* Hide desktop navbar on small screens */
 @media (max-width: 768px) {
   .navbar {
-    display: none;
+    display: none !important; /* Force hide navbar */
   }
 }
 
@@ -48,11 +39,28 @@
   }
 }
 
+.navbar li {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for desktop menu */
+.navbar li:hover {
+  color: #00ff00; /* Change color on hover */
+}
+
 /* Hamburger menu styles */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+}
+
+/* Ensure hamburger button is visible only on smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex !important; /* Force show hamburger */
+  }
 }
 
 .hamburger .line {
@@ -65,14 +73,7 @@
 
 /* Hover effect for hamburger */
 .hamburger:hover .line {
-  background-color: #00ff00;;
-}
-
-/* Show hamburger menu only on small screens */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
+  background-color: #00ff00;
 }
 
 /* Mobile Navigation */
@@ -102,7 +103,7 @@
 /* Hover effect for mobile menu */
 .mobile-menu li:hover {
   background-color: #3a3d3c;
-  color: #00ff00;;
+  color: #00ff00;
 }
 
 .mobile-menu li:last-child {
