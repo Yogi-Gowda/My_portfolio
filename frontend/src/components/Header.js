@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      {/* Hamburger menu for mobile */}
+      {/* Hamburger menu for mobile and minimized desktop */}
       <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <div className="line"></div>
         <div className="line"></div>
