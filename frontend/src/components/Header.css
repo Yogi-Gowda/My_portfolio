@@ -7,6 +7,7 @@
   color: #e44717;
   height: 60px;
   border-radius: 8px;
+  position: relative; /* Needed for absolute positioning of the mobile menu */
 }
 
 .navbar {
@@ -41,32 +42,6 @@
   color: #1ef70a; /* Change color on hover */
 }
 
-/* Media Queries for Responsive Design */
-
-/* For mobile devices (screen width less than 768px) */
-@media (max-width: 768px) {
-  .header {
-    height: auto; /* Adjust height for mobile */
-    padding: 10px 0; /* Add padding for better spacing */
-  }
-
-  .navbar {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-  }
-
-  .navbar li {
-    margin: 10px 0; /* Add spacing between stacked items */
-  }
-}
-
-/* For tablets (screen width between 768px and 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navbar li {
-    margin: 0 10px; /* Reduce spacing between items */
-    font-size: 14px; /* Adjust font size for tablets */
-  }
-}
 /* Hamburger menu styles */
 .hamburger {
   display: none; /* Hide by default on desktop */
@@ -81,23 +56,36 @@
   margin: 4px 0;
 }
 
-/* Show hamburger menu on mobile */
+/* Mobile menu styles */
+.mobile-menu {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Position below the header */
+  left: 0;
+  width: 100%;
+  background-color: #878b89;
+  z-index: 1000; /* Ensure it appears above other content */
+  border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+}
+
+.mobile-menu.open {
+  display: flex; /* Show mobile menu when open */
+}
+
+/* Media Queries for Responsive Design */
+
+/* For mobile devices (screen width less than 768px) */
 @media (max-width: 768px) {
   .hamburger {
     display: flex; /* Show hamburger menu */
   }
 
   .navbar {
-    display: none; /* Hide navbar by default on mobile */
-    flex-direction: column;
-    width: 100%;
-    background-color: #878b89;
-    position: absolute;
-    top: 60px;
-    left: 0;
+    display: none; /* Hide desktop navbar on mobile */
   }
 
-  .navbar.open {
-    display: flex; /* Show navbar when menu is open */
+  .mobile-menu.open {
+    display: flex; /* Show mobile menu when open */
   }
 }
