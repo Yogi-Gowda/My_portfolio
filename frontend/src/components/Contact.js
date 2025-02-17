@@ -18,7 +18,7 @@ const ContactPage = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch('https://my-portfolio-6-u9ht.onrender.com/api/contact', {
+      const response = await fetch('https://my-portfolio-6-u9ht.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
