@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ Fixed: CORS Middleware for both Localhost & Deployed Frontend
 app.use(cors({
-  origin: ['https://portfolio-16i7.onrender.com', 'https://yogigowda44.netlify.app'], // Add Netlify domain
+  origin: ['http://localhost:3000', 'https://yogigowda44.netlify.app'], // Add Netlify domain
   methods: ['POST'],
   allowedHeaders: ['Content-Type'],
 }));
