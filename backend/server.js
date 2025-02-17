@@ -8,10 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+const cors = require('cors');
+
 app.use(cors({
-  origin: 'https://yogigowda238.netlify.app', // Allow frontend origin
-  methods: 'POST',
-  allowedHeaders: 'Content-Type',
+  origin: ['https://your-netlify-site.netlify.app', 'http://localhost:3000'],
+  methods: ['POST', 'GET'],
+  allowedHeaders: ['Content-Type']
 }));
 
 app.use(bodyParser.json());
