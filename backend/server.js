@@ -7,21 +7,22 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+// ✅ Correct CORS Setup
 app.use(cors({
-  origin: 'https://yogigowda44.netlify.app/', // Allow frontend origin
-  methods: 'POST',
-  allowedHeaders: 'Content-Type',
+  origin: ['https://yogigowda44.netlify.app', 'http://localhost:3000'], // Allow Netlify & Localhost
+  methods: ['POST'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true // Allow cookies/auth if needed
 }));
 
 app.use(bodyParser.json());
 
-// Nodemailer transporter setup
+// ✅ Email Setup (Ensure .env has correct credentials)
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // You can use other services
+  service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER, // Your email
-    pass: process.env.EMAIL_PASS, // Your email password or app password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -30,7 +31,7 @@ app.post('/api/contact', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_USER, // Your email ID
+    to: process.env.RECEIVER_EMAIL, // Ensure this is the correct recipient
     subject: `New Message from ${name}`,
     text: `You have received a new message from ${name} (${email}):\n\n${message}`,
   };
