@@ -26,16 +26,18 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/api/contact', (req, res) => {
-  const { name, email, message, recipient } = req.body; // Recipient now comes from request body
+const DEFAULT_RECIPIENT = 'default@example.com'; // Set a default recipient email
 
-  if (!recipient) {
-    return res.status(400).json({ message: 'Recipient email is required' });
+app.post('/api/contact', (req, res) => {
+  const { name, email, message } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ message: 'Sender email is required' });
   }
 
   const mailOptions = {
     from: email,
-    to: recipient, // Dynamically set recipient email
+    to: DEFAULT_RECIPIENT, // Use the default recipient
     subject: `New Message from ${name}`,
     text: `You have received a new message from ${name} (${email}):\n\n${message}`,
   };
