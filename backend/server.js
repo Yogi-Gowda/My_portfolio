@@ -11,9 +11,9 @@ const PORT = process.env.PORT || 5000;
 const cors = require('cors');
 
 app.use(cors({
-  origin: ['https://your-netlify-site.netlify.app', 'http://localhost:3000'],
-  methods: ['POST', 'GET'],
-  allowedHeaders: ['Content-Type']
+  origin: 'http://localhost:3000', // Allow frontend origin
+  methods: 'POST',
+  allowedHeaders: 'Content-Type',
 }));
 
 app.use(bodyParser.json());
