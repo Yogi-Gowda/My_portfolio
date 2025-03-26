@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route, useNavigate, useParams, useLocation } from 'react-router-dom';
 import './Projects.css';
 
-// Project Data with Detailed Information
 const PROJECTS_DATA = [
   {
     id: 1,
@@ -88,7 +87,6 @@ const PROJECTS_DATA = [
   },
 ];
 
-// Project Card Component (Used in Project List)
 const ProjectCard = ({ project }) => {
   const navigate = useNavigate();
 
@@ -111,7 +109,6 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-// Project List Component
 const ProjectList = () => {
   return (
     <div className="projects-page">
@@ -127,7 +124,6 @@ const ProjectList = () => {
   );
 };
 
-// Project Detail Component (FIXED: Now Displays Details Properly)
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -155,7 +151,6 @@ const ProjectDetail = () => {
   );
 };
 
-// Main Projects Component
 const Projects = () => {
   return (
     <Routes>
