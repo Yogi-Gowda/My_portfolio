@@ -1,27 +1,26 @@
-/* Base Hero Section */
 .hero {
   display: flex;
-  justify-content: space-between; /* Space between text and image */
+  justify-content: space-between; 
   align-items: center;
   height: 80vh;
-  padding: 40px 60px; /* Padding around the section */
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
+  padding: 40px 60px; 
+  background-color: #000; 
+  color: #fff; 
 }
 
 .hero-content {
   display: flex;
-  flex-direction: row; /* Row layout by default */
+  flex-direction: row; 
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px; /* Limit max width */
-  margin: 0 auto; /* Center the content */
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .hero-text {
-  flex: 1; /* Occupy space on the left */
-  text-align: left; /* Align text to the left */
+  flex: 1; 
+  text-align: left; 
 }
 
 .hero-text h3 {
@@ -50,7 +49,7 @@
 }
 
 .hero-image {
-  flex: 1; /* Occupy space on the right */
+  flex: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,49 +63,48 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero {
-    height: auto; /* Allow height to adjust for content */
-    padding: 20px; /* Reduce padding */
+    height: auto; 
+    padding: 20px; 
   }
 
   .hero-content {
-    flex-direction: column; /* Stack text and image */
+    flex-direction: column; 
     align-items: center;
   }
 
   .hero-image {
-    margin-bottom: 20px; /* Add spacing below the image */
-    order: 1; /* Make image appear first */
+    margin-bottom: 20px; 
+    order: 1; 
   }
 
   .hero-text {
-    text-align: center; /* Center-align text */
-    order: 2; /* Keep text below image */
+    text-align: center; 
+    order: 2; 
   }
 
   .hero-text h2 {
-    font-size: 2rem; /* Reduce heading size */
+    font-size: 2rem; 
   }
 
   .hero-text p {
-    font-size: 1rem; /* Reduce paragraph size */
+    font-size: 1rem; 
   }
 
   .hero-image img {
-    width: 200px; /* Smaller image on mobile */
+    width: 200px; 
     height: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-text h2 {
-    font-size: 1.8rem; /* Further reduce heading size */
+    font-size: 1.8rem; 
   }
 
   .hero-text p {
-    font-size: 0.9rem; /* Smaller text */
+    font-size: 0.9rem; 
   }
 
   .hero-image img {
