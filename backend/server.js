@@ -7,17 +7,16 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// ✅ Correct CORS Setup
+
 app.use(cors({
-  origin: ['https://yogigowda44.netlify.app', 'http://localhost:3000'], // Allow Netlify & Localhost
+  origin: ['https://yogigowda44.netlify.app', 'http://localhost:3000'], 
   methods: ['POST'],
   allowedHeaders: ['Content-Type'],
-  credentials: true // Allow cookies/auth if needed
+  credentials: true 
 }));
 
 app.use(bodyParser.json());
 
-// ✅ Email Setup (Ensure .env has correct credentials)
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -26,7 +25,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const DEFAULT_RECIPIENT = 'default@example.com'; // Set a default recipient email
+const DEFAULT_RECIPIENT = 'default@example.com';
 
 app.post('/api/contact', (req, res) => {
   const { name, email, message } = req.body;
@@ -37,7 +36,7 @@ app.post('/api/contact', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: DEFAULT_RECIPIENT, // Use the default recipient
+    to: DEFAULT_RECIPIENT, 
     subject: `New Message from ${name}`,
     text: `You have received a new message from ${name} (${email}):\n\n${message}`,
   };
