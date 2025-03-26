@@ -8,7 +8,6 @@ import imageGeneration  from './imagegeneration.jpg';
 import niSm from './nism.jpg';
 
 const CertificationsPage = () => {
-  // State to manage modal visibility and selected certificate
   const [selectedImage, setSelectedImage] = useState(null);
 
   const certifications = [
@@ -50,19 +49,16 @@ const CertificationsPage = () => {
     },
   ];
 
-  // Function to open the modal with the selected image
   const openModal = (image) => {
     setSelectedImage(image);
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setSelectedImage(null);
   };
 
   return (
     <div className="certifications-page">
-      {/* Certifications Section */}
       <main className="certifications-container">
         <h2 className="certifications-title">My Certifications</h2>
         <div className="certifications-grid">
@@ -75,7 +71,7 @@ const CertificationsPage = () => {
               />
               <h3 className="certificate-title">{certification.title}</h3>
               <button
-                onClick={() => openModal(certification.image)} // Open modal with the selected image
+                onClick={() => openModal(certification.image)} 
                 className="view-button"
               >
                 View Certificate
@@ -85,7 +81,6 @@ const CertificationsPage = () => {
         </div>
       </main>
 
-      {/* Modal Section */}
       {selectedImage && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
