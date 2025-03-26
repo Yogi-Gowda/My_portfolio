@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between; /* Keeps hamburger and navbar aligned */
+  justify-content: space-between; 
   align-items: center;
   padding: 0 20px;
   background-color: #878b89;
@@ -11,28 +11,25 @@
   width: 100%;
 }
 
-/* Desktop Navigation */
 .navbar {
   display: flex;
-  justify-content: center; /* Ensures center alignment */
+  justify-content: center; 
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0 auto; /* Centers navbar horizontally */
+  margin: 0 auto; 
   color: rgb(236, 240, 236);
-  gap: 130px; /* Spacing between items */
+  gap: 130px; 
   font-size: 18px;
   border-radius: 8px;
 }
 
-/* Hide desktop navbar on small screens */
 @media (max-width: 768px) {
   .navbar {
-    display: none !important; /* Force hide navbar */
+    display: none !important; 
   }
 }
 
-/* Show desktop navbar only on large screens */
 @media (min-width: 769px) {
   .navbar {
     display: flex;
@@ -44,22 +41,19 @@
   transition: color 0.3s ease-in-out;
 }
 
-/* Hover effect for desktop menu */
 .navbar li:hover {
-  color: #00ff00; /* Change color on hover */
+  color: #00ff00; 
 }
 
-/* Hamburger menu styles */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
 }
 
-/* Ensure hamburger button is visible only on smaller screens */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex !important; /* Force show hamburger */
+    display: flex !important; 
   }
 }
 
@@ -71,12 +65,10 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-/* Hover effect for hamburger */
 .hamburger:hover .line {
   background-color: #00ff00;
 }
 
-/* Mobile Navigation */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -100,7 +92,6 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Hover effect for mobile menu */
 .mobile-menu li:hover {
   background-color: #3a3d3c;
   color: #00ff00;
