@@ -11,17 +11,14 @@ import ContactPage from "./ContactUs";
 function App() {
   const location = useLocation();
 
-  // Hide Header on Blog and Project Detail Pages
   const isBlogDetailPage = location.pathname.startsWith('/blogs/') && location !== '/blogs';
   const isProjectDetailPage = location.pathname.startsWith('/projects/') && location !== '/projects';
 
   return (
     <div>
-      {/* Show Header only on the Home Page and Blog/Project List Pages */}
       {!isBlogDetailPage && !isProjectDetailPage && <Header />}
 
       <Routes>
-        {/* Home route with all sections */}
         <Route
           path="/"
           element={
@@ -36,10 +33,8 @@ function App() {
           }
         />
 
-        {/* Blog Section Routes */}
         <Route path="/blogs/*" element={<Blogs />} />
 
-        {/* Project Section Routes */}
         <Route path="/projects/*" element={<Projects />} />
       </Routes>
     </div>
