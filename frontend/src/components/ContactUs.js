@@ -7,7 +7,6 @@ import instagramIcon from './instagram.jpg';
 const ContactUsPage = () => {
   return (
     <div className="contact-us-page">
-      {/* Contact Info Section */}
       <main className="contact-info-container">
         <h2 className="contact-title">Get in Touch</h2>
         <p className="contact-description">
@@ -29,7 +28,6 @@ const ContactUsPage = () => {
           </div>
         </div>
 
-        {/* Social Icons */}
         <div className="contact-social">
           <h3>Connect with me:</h3>
           <div className="social-icons">
@@ -46,7 +44,6 @@ const ContactUsPage = () => {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="footer">
         <p>© 2024 Yogesh K Gowda. All rights reserved.</p>
       </footer>
