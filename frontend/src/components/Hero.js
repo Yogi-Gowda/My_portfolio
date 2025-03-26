@@ -5,7 +5,6 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        {/* Left Side: Text */}
         <div className="hero-text">
           <h3>Welcome to my PORTFOLIO!</h3>
           <h2>Hi I am, Yogesh K Gowda</h2>
@@ -18,7 +17,6 @@ function Hero() {
           </p>
         </div>
 
-        {/* Right Side: Image */}
         <div className="hero-image">
           <img 
             src="/images/profile.jpeg" 
