@@ -1,4 +1,3 @@
-/* Default theme (dark) variables */
 :root {
   --background-color: #111;
   --text-color: #fff;
@@ -6,7 +5,6 @@
   --button-text: #000;
 }
 
-/* Light theme variables */
 [data-theme="light"] {
   --background-color: #fff;
   --text-color: #2ae723;
@@ -14,7 +12,6 @@
   --button-text: #fff;
 }
 
-/* Apply variables to styles */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
