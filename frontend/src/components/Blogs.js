@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route, useNavigate, useParams, useLocation } from 'react-router-dom';
 import './Blogs.css';
 
-// Updated Blog Data with Full Information
 const BLOG_DATA = [
   {
     id: 1,
@@ -108,7 +107,6 @@ const BLOG_DATA = [
   }
 ];
 
-// Blog Components
 const BlogCard = ({ blog }) => {
   const navigate = useNavigate();
 
@@ -127,7 +125,6 @@ const BlogCard = ({ blog }) => {
   );
 };
 
-// Blog List Component
 const BlogList = () => {
   return (
     <div className="blog-page">
@@ -143,7 +140,6 @@ const BlogList = () => {
   );
 };
 
-// Blog Detail Component
 const BlogDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -172,7 +168,6 @@ const BlogDetail = () => {
   );
 };
 
-// Main Blogs Component
 const Blogs = () => {
   return (
     <Routes>
