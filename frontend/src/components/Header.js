@@ -14,14 +14,12 @@ const Header = () => {
 
   return (
     <header className="header">
-      {/* Hamburger menu (Visible in Mobile & Minimized Screens) */}
       <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
       </div>
 
-      {/* Desktop Navigation (Visible only in large screens) */}
       <ul className="navbar">
         <li onClick={() => scrollToSection("hero")}><b>Home</b></li>
         <li onClick={() => scrollToSection("projects")}><b>Projects</b></li>
@@ -30,7 +28,6 @@ const Header = () => {
         <li onClick={() => scrollToSection("contact")}><b>Contact Me</b></li>
       </ul>
 
-      {/* Mobile Navigation (Appears when hamburger is clicked) */}
       <ul className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <li onClick={() => scrollToSection("hero")}>Home</li>
         <li onClick={() => scrollToSection("projects")}>Projects</li>
