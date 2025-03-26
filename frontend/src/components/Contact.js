@@ -28,7 +28,7 @@ const ContactPage = () => {
   
       if (response.ok) {
         setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' }); // Reset the form
+        setFormData({ name: '', email: '', message: '' });
       } else {
         setStatus('Failed to send message. Please try again.');
       }
